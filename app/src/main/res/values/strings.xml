@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ImageSearchApp</string>
+
+    <string name="text_image_list_view_empty">검색 버튼을 눌러 검색을 시작해보세요!</string>
+    <string name="text_image_sort_type_accuracy">정확도순</string>
+    <string name="text_image_sort_type_recency">최신순</string>
+    <string name="success_image_search_empty_result">검색 결과가 없습니다.</string>
+    <string name="success_image_search_last_page">검색 결과가 더 이상 없습니다.</string>
+
+    <string name="hint_search_form">내용을 입력해주세요.</string>
+
+    <string name="title_image_search_detail">이미지 상세보기</string>
+    <string name="message_search_form_empty">검색할 내용을 입력해주세요.</string>
+
+    <string name="error_unknown">알 수 없는 오류가 발생했습니다.</string>
+    <string name="error_network_not_connect">인터넷 연결 상태를 확인해주세요.</string>
 </resources>
