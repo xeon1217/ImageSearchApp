@@ -33,6 +33,7 @@ class ImageSearchActivity : BaseActivity<ActivityImageSearchBinding>() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(false)
+            setDisplayShowTitleEnabled(false)
         }
     }
 

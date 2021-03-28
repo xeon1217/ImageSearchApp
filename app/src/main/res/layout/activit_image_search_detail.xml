@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:id="@+id/imageViewConstraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,10 +34,7 @@
                     android:id="@+id/progressBar"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@+id/displayInfoLinearLayout"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_height="wrap_content"/>
 
                 <ImageView
                     android:id="@+id/documentImageView"
@@ -45,10 +42,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:loadImage="@{imageSearchDetailViewModel.document.imageUrl}"
                     app:progressBar="@{progressBar}"
                     tools:srcCompat="@drawable/ic_baseline_android_24" />
@@ -59,32 +52,29 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorLoading"
                     android:orientation="vertical"
-                    android:padding="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/documentImageView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    android:padding="8dp">
 
                     <TextView
                         android:id="@+id/displaySiteNameTextView"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="end"
-                        android:text="@{imageSearchDetailViewModel.document.displaySiteName}"
+                        android:text="@{imageSearchDetailViewModel.document.displaySiteName != null ? @string/text_image_source+imageSearchDetailViewModel.document.displaySiteName : @string/text_image_detail_info_empty}"
                         android:textColor="@color/textColorPrimary"
                         tools:text="display_sitename" />
 
                     <TextView
                         android:id="@+id/dateTimeTextView"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="end"
-                        android:text="@{imageSearchDetailViewModel.document.dateTime}"
+                        android:text="@{imageSearchDetailViewModel.document.dateTime != null ? @string/text_image_create_time+imageSearchDetailViewModel.document.dateTime : @string/text_image_detail_info_empty}"
                         android:textColor="@color/textColorPrimary"
                         tools:text="datetime" />
 
                 </LinearLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </ScrollView>
 

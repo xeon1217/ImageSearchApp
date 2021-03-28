@@ -4,10 +4,14 @@
     <string name="text_image_list_view_empty">검색 버튼을 눌러 검색을 시작해보세요!</string>
     <string name="text_image_sort_type_accuracy">정확도순</string>
     <string name="text_image_sort_type_recency">최신순</string>
+    <string name="text_image_detail_info_empty">정보 없음</string>
+    <string name="text_image_source">출처\t:\t</string>
+    <string name="text_image_create_time">문서 작성 시간\t:\t</string>
     <string name="success_image_search_empty_result">검색 결과가 없습니다.</string>
     <string name="success_image_search_last_page">검색 결과가 더 이상 없습니다.</string>
 
     <string name="hint_search_form">내용을 입력해주세요.</string>
+
 
     <string name="title_image_search_detail">이미지 상세보기</string>
     <string name="message_search_form_empty">검색할 내용을 입력해주세요.</string>
